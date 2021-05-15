@@ -1,0 +1,551 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  color: black;
+}
+
+.header__container {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5em;
+  padding: 2em;
+}
+
+.header__logo {
+  position: relative;
+  display: block;
+  width: calc(7em + 8vw);
+  max-width: 12em;
+}
+
+.header__logo img,
+.footer__logo svg {
+  width: 100%;
+  height: auto;
+}
+
+.header__link {
+  position: relative;
+  color: hsl(238, 22%, 44%);
+  font-size: clamp(0.65em, -0.5em + 5vw, 1em);
+  text-decoration: none;
+}
+
+.header__link:nth-child(2) {
+  margin: 0 0.5em;
+}
+
+.header__link:hover::after {
+  position: absolute;
+  content: "";
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: hsl(238, 22%, 44%);
+  -webkit-animation: line 0.75s 1 forwards;
+  animation: line 0.75s 1 forwards;
+}
+
+@-webkit-keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+section {
+  padding: 0 2em;
+}
+
+section .img img {
+  background-color: black;
+  margin-top: 3em;
+  width: 100%;
+  height: auto;
+}
+
+.intro__text h1 {
+  font-size: clamp(1.5em, -0.875em + 8.333vw, 2em);
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.text h2 {
+  font-size: clamp(1.2em, -0.875em + 7.333vw, 1.7em);
+  line-height: 1.5em;
+  text-align: center;
+}
+
+.intro__text p,
+.text {
+  font-size: clamp(0.9em, -0.675em + 5.5vw, 1.1em);
+}
+
+.text {
+  margin: 2em 0 3.5em;
+}
+
+.section--white {
+  padding-bottom: 2em;
+}
+
+.intro__text p {
+  text-align: center;
+  margin: 2em auto 0;
+  width: 93%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 1em 2em;
+}
+
+.form input,
+.form button {
+  width: 100%;
+  border-radius: 0.2em;
+  height: 3.5em;
+}
+
+.form input {
+  padding-left: 2em;
+  color: hsl(0, 0%, 75%);
+}
+
+.form button {
+  border: none;
+  background-color: hsl(224, 93%, 58%);
+  box-shadow: border;
+  color: white;
+  margin: 1em 0;
+  cursor: pointer;
+}
+
+.form button:hover {
+  opacity: 0.8;
+}
+
+.section--white .form input {
+  border: 1px solid hsl(243, 87%, 12%);
+}
+
+.wave__container {
+  position: relative;
+  width: 100%;
+}
+
+.wave__container > * {
+  width: 100%;
+}
+
+.desktop__wave--top {
+  display: none;
+}
+
+.mobile__wave--top {
+  position: absolute;
+  top: -2em;
+}
+
+.section--light-blue {
+  background-color: hsl(240, 75%, 98%);
+  margin: 0 0 /*2em*/;
+}
+
+.section--light-blue h2 {
+  margin-bottom: 2em;
+}
+
+.section--light-blue .text p {
+  text-align: left;
+}
+
+.section--light-blue .text p:nth-of-type(1n) {
+  padding-bottom: 1em;
+}
+
+.section--light-blue .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+.link a {
+  border-bottom: 1px solid hsl(168, 76%, 37%);
+  color: hsl(168, 76%, 37%);
+  text-decoration: none;
+  padding-bottom: 0.25em;
+}
+
+.link a:hover {
+  opacity: 0.5;
+}
+
+.arrow-icon {
+  position: relative;
+  top: 0.25em;
+  display: inline-flex;
+  align-self: center;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.profile__card {
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.2);
+  margin-bottom: 2.5em;
+  padding: 1.5em;
+  font-size: 0.8em;
+}
+
+.comments {
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-title {
+  align-self: center;
+  font-weight: 700;
+  line-height: 1.5em;
+}
+
+.profile img {
+  border-radius: 50%;
+  width: 3em;
+  margin-right: 1.5em;
+}
+
+.profile-status {
+  color: hsl(238, 22%, 44%);
+  font-weight: 400;
+}
+
+.subscription {
+  background-color: hsl(238, 22%, 44%);
+  color: white;
+}
+
+.subscription h2 {
+  padding-top: 2em;
+}
+
+.subscription .text p {
+  text-align: center;
+  padding-top: 1em;
+}
+
+.subscription .form input {
+  border: none;
+}
+
+footer {
+  position: relative;
+  background-color: hsl(192, 100%, 9%);
+  color: white;
+  padding-top: 2em;
+}
+
+footer p,
+.location span {
+  line-height: 1.5em;
+}
+
+.footer__logo {
+  width: calc(9em + 10vw);
+  margin: 2em;
+}
+
+.footer__main-content {
+  margin: 0 2em 2em;
+}
+
+.contacts {
+  margin: 0;
+  max-width: 30em;
+}
+
+.contacts span {
+  margin-left: 1em;
+}
+
+.phone,
+.mail {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.phone {
+  padding: 2em 0;
+}
+
+.informations {
+  margin: 2em 0 1em;
+  min-width: 20.4em;
+  max-width: 60%;
+}
+
+.part__one {
+  margin: 4em 0 2.5em;
+}
+
+li {
+  line-height: 2.5em;
+  list-style: none;
+}
+
+.footer__socials--icons {
+  margin: 2.5em auto;
+  width: 9em;
+  word-spacing: 1em;
+}
+
+.link svg {
+  fill: white;
+  width: 2em;
+  height: auto;
+}
+
+.facebook:hover {
+  fill: hsl(220, 46%, 48%);
+}
+
+.instagram:hover {
+  fill: url(#gradient);
+}
+
+.twitter:hover {
+  fill: hsl(203, 89%, 53%);
+}
+
+.copyright {
+  font-size: clamp(0.7rem, -0.5rem + 5vw, 0.9rem);
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  margin: auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 400px) {
+  .desktop__wave--top {
+    display: block;
+  }
+
+  .mobile__wave--top {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  section .img {
+    display: flex;
+    justify-content: center;
+  }
+
+  section .img img {
+    width: 80%;
+  }
+
+  .intro,
+  .section--light-blue .text {
+    margin: 1.8em auto 2em;
+    width: 90%;
+  }
+
+  .intro .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .section--white .form input {
+    width: 70%;
+  }
+
+  .section--white .form button {
+    margin-top: 0;
+    width: 25%;
+  }
+
+  .profile__card {
+    margin: 0 auto 2em;
+    width: 50%;
+  }
+
+  .subscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subscription .text {
+    margin-top: 4em;
+    min-width: 21.5em;
+    width: 50%;
+  }
+
+  .subscription .text h2,
+  .subscription .text p {
+    text-align: left;
+  }
+
+  .subscription h2 {
+    padding-top: 0;
+  }
+
+  .sign {
+    width: 45%;
+  }
+
+  .sign button {
+    align-self: flex-start;
+    margin-top: 1em;
+    width: 50%;
+  }
+
+  .footer__info,
+  .informations {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .phone {
+    padding: 0.5em 0 2em;
+  }
+
+  .informations,
+  .informations .part__one {
+    margin: 0;
+  }
+
+  .footer__socials--icons {
+    margin-top: 5em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header__link:nth-child(2) {
+    margin: 0 2em;
+  }
+
+  .section--white,
+  .section--light-blue {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+  }
+
+  .intro {
+    align-self: center;
+    width: 60%;
+  }
+
+  .intro, .section--light-blue .text, .section--light-blue .link, .profile__card, .subscription .text {
+    margin-left: 2.5em;
+  }
+
+  .intro__text p {
+    margin: 2em 0 0;
+  }
+
+  .intro .intro__text > *,
+  .section--light-blue .text > * {
+    text-align: start;
+  }
+
+  .intro form {
+    margin: 2em 0 0;
+  }
+
+  .intro .form input {
+    width: 60%;
+  }
+
+  .intro .form button,
+  .sign button {
+    width: 35%;
+  }
+
+  .section--light-blue .link {
+    justify-content: left;
+  }
+
+  .subscription .text {
+    width: 37%;
+  }
+
+  .sign input {
+    align-self: flex-start;
+    width: 85%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 0 5em;
+  }
+
+  .footer__logo,
+  .attribution {
+    margin-top: 5em;
+  }
+
+  .footer__main-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer__main-content {
+    width: 100%;
+  }
+
+  .footer__info {
+    width: 60%;
+  }
+
+  .footer__socials--icons {
+    margin-top: 0;
+  }
+}
