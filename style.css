@@ -349,11 +349,6 @@ li {
   fill: hsl(203, 89%, 53%);
 }
 
-.copyright {
-  font-size: clamp(0.7rem, -0.5rem + 5vw, 0.9rem);
-  text-align: center;
-}
-
 .attribution {
   font-size: 11px;
   margin: auto;
