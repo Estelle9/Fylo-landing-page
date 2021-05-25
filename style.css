@@ -78,7 +78,6 @@ section {
 }
 
 section .img img {
-  background-color: black;
   margin-top: 3em;
   width: 100%;
   height: auto;
@@ -88,6 +87,7 @@ section .img img {
   font-size: clamp(1.5em, -0.875em + 8.333vw, 2em);
   line-height: 1.5em;
   text-align: center;
+  margin-top: 2em;
 }
 
 .text h2 {
@@ -171,7 +171,7 @@ section .img img {
 
 .section--light-blue {
   background-color: hsl(240, 75%, 98%);
-  margin: 0 0 /*2em*/;
+  margin: 0 0;
 }
 
 .section--light-blue h2 {
