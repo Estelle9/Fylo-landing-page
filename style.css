@@ -500,8 +500,14 @@ li {
     width: 35%;
   }
 
-  .section--light-blue .link {
-    justify-content: left;
+  .part__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .part__left .link {
+    align-self: flex-start;
+    margin-bottom: 2.5em;
   }
 
   .subscription .text {
